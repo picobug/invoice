@@ -1,0 +1,28 @@
+{
+    "name": "invoice",
+    "description": "Invoice System for Travel Agent",
+    "keywords": [
+        "invoice",
+        "travel"
+    ],
+    "private": true,
+    "license": "MIT",
+    "author": {
+        "name": "Julian Prasetyo",
+        "email": "picobug.jp@gmail.com",
+        "url": "https://picobug.github.io"
+    },
+    "scripts": {
+        "analize": "laravel-nuxt build -a",
+        "build": "laravel-nuxt build",
+        "dev": "laravel-nuxt dev",
+        "start": "laravel-nuxt"
+    },
+    "devDependencies": {},
+    "dependencies": {
+        "@nuxtjs/auth": "^4.5.1",
+        "laravel-nuxt": "^1.4.7",
+        "pug": "^2.0.3",
+        "pug-plain-loader": "^1.0.0"
+    }
+}
