@@ -11,6 +11,10 @@
 |
 */
 
+// Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 // FallBack Route for NuxtJS
 Route::get(
     '{uri}',

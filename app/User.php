@@ -3,12 +3,13 @@
 namespace App;
 
 use Ramsey\Uuid\Uuid;
+use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, HasApiTokens;
     public $incrementing = false;
 
     /**
@@ -33,7 +34,7 @@ class User extends Authenticatable
     {
         parent::boot();
         self::creating(function ($model) {
-            $model->id = (string) Uuid::generate();
+            $model->id = (string) Uuid::uuid4();
         });
     }
 }

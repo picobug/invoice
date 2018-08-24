@@ -13,7 +13,7 @@ class Model extends \Model
     {
         parent::boot();
         self::creating(function ($model) {
-            $model->id = (string) Uuid::generate();
+            $model->id = (string) Uuid::uuid4();
         });
     }
 }
